@@ -3,13 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { MembersDetailComponent } from './members-detail/members-detail.component';
 import { NewMemberComponent } from './new-member/new-member.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {QrcodeComponent  } from './qrcode/qrcode.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'member-detail/:id', component: MembersDetailComponent },
   // { path: 'new-member', component: NewMemberComponent },
-
   { path: 'new-member/:id', component: NewMemberComponent },
+  { path: 'qrcode', component: QrcodeComponent },
+
+
 ];
 
 @NgModule({

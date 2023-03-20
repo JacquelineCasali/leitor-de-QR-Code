@@ -7,15 +7,23 @@ import { AppComponent } from './app.component';
 import { MembersDetailComponent } from './members-detail/members-detail.component';
 import { NewMemberComponent } from './new-member/new-member.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { QRCodeModule } from 'angularx-qrcode';
+import { QrcodeComponent } from './qrcode/qrcode.component';
 @NgModule({
   declarations: [
     AppComponent,
     MembersDetailComponent,
     NewMemberComponent,
     DashboardComponent,
+    QrcodeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    QRCodeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

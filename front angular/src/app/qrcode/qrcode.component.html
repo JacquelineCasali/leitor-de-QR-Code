@@ -1,0 +1,12 @@
+<h1>QR Code Image Generator</h1>
+
+<qrcode
+  elementType="svg"
+  (qrCodeURL)="onChangeURL($event)"
+  [width]="400"
+  qrdata="http://localhost:4200/new-member/4"
+  [errorCorrectionLevel]="'H'"
+></qrcode>
+
+<a [href]="url" download="techshareskk">download QR Code </a>
+<!-- <button (click)="newMember(selected_geral)">Generate Imagem</button> -->

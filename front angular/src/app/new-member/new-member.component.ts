@@ -38,37 +38,4 @@ export class NewMemberComponent implements OnInit {
     );
   }
   // metodo PUT- atualizar
-  update() {
-    this.api.updateMember(this.selected_geral).subscribe(
-      (data) => {
-        // mombers nome da tabela no banco
-
-        console.log(data);
-        this.selected_geral = data;
-      },
-      (error) => {
-        console.log('Aconteceu um erro', error.message);
-      }
-    );
-  }
-
-  newMember() {
-    this.router.navigate(['new-member']);
-  }
-  // deletar membro
-  delete() {
-    this.api.deleteMember(this.selected_id).subscribe(
-      (data) => {
-        //  deletando menbro
-        let index;
-        this.appComponente.gerals.forEach((e, i) => {
-          if (e.id == this.selected_id) index = i;
-        });
-        this.appComponente.gerals.splice(1);
-      },
-      (error) => {
-        console.log('Aconteceu um erro', error.message);
-      }
-    );
-  }
 }

@@ -60,6 +60,10 @@ export class MembersDetailComponent implements OnInit {
     this.router.navigate(['new-member', selected_geral.id]);
   };
 
+  qrcodeMember = () => {
+    this.router.navigate(['qrcode']);
+  };
+
   // deletar membro
   delete() {
     this.api.deleteMember(this.selected_id).subscribe(
