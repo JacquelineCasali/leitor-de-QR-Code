@@ -1,0 +1,10 @@
+<h1>QR Code Image Generator</h1>
+<ul>
+  <li
+    style="cursor: pointer"
+    *ngFor="let geral of gerals"
+    (click)="menberClicked(geral)"
+  >
+    Nome: {{ geral.name }}
+  </li>
+</ul>

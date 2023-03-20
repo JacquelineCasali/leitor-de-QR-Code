@@ -1,0 +1,15 @@
+<h1>QR Code Image Generator</h1>
+<div>
+  <label for="nome">Name :</label>
+
+  <input type="text" [(ngModel)]="selected_geral.name" />
+</div>
+<div>
+  <label for="nome">Linkedin Url : </label>
+  <input class="input" type="text" [(ngModel)]="selected_geral.linkedin" />
+</div>
+<div>
+  <label for="nome">Github URL : </label>
+  <input type="text" [(ngModel)]="selected_geral.github" />
+</div>
+<button (click)="newMember(selected_geral)">Generate Imagem</button>
