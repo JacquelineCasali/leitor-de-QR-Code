@@ -6,10 +6,15 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   baseUrl = 'http://localhost:8000/';
-  httpHeaders = new HttpHeaders({
-    'X-CSRFToken': 'csrftoken',
-    // 'Content-Type': 'applications/json',
-  });
+  token = 'Token ea241e70f2c02a5e37c1ddd13bed8c1746066340';
+
+  httpHeaders = new HttpHeaders()
+    .set(
+      // 'Content-Type': 'applications/json'
+      'X-CSRFToken',
+      'csrftoken'
+    )
+    .set('Authorization', this.token);
 
   //  interação com a api
   constructor(private http: HttpClient) {}

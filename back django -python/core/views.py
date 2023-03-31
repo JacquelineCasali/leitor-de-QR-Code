@@ -2,12 +2,15 @@ from rest_framework import viewsets
 from .models import Geral
 from .serializers import GeralSerializer , GeralSimpleSerializer
 from rest_framework.response import Response
-
+from rest_framework.authentication import TokenAuthentication,SessionAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 class GeralViewSet(viewsets.ModelViewSet):
   
     queryset = Geral.objects.all()
     serializer_class = GeralSerializer
+    authentication_classes=[TokenAuthentication,SessionAuthentication]
+    permission_classes=[IsAuthenticated,]
 #  definir o metodo listen (listagem )
 
 # padrão do django
