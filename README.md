@@ -13,6 +13,7 @@ Angular e Django
 
 Python 3.8
 Django
+Cors
 
 # Instalação
 
@@ -20,6 +21,9 @@ instale o pacote de desenvolvimento do python
 Dentro do diretório do projeto, crie o seu ambiente virtual e ativá-lo:
 python -m venv venv
 para ativar entere na pasta venv\Scripts> .\activate
+
+no chome instalar a extenção e ativar cors na maquina no link
+https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=pt
 
 # Rodar o banco
 
